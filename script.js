@@ -89,7 +89,7 @@ function getLocalStorage() {
 	else
   	bestScore = parseInt(localStorage.getItem('bestScore'));
 	if(isNaN(localStorage.getItem('size')))
-		canvasSize = 5;
+		canvasSize = 100;
 	else
 		canvasSize = parseInt(localStorage.getItem('size'));
 	if(isNaN(localStorage.getItem('speed')))
