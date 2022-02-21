@@ -96,6 +96,7 @@ function getLocalStorage() {
 		valSpeed = 1;
 	else	
 		valSpeed = parseInt(localStorage.getItem('speed'));
+	if(isNaN(parseInt(localStorage.getItem('size'))))
 	size.textContent = 'Size:\n' + canvasSize / box;
 	speed.textContent = 'Speed:\n' + valSpeed;
 	currentScore.textContent = "Score:\n" + score;
@@ -104,6 +105,8 @@ function getLocalStorage() {
 	context.canvas.height = canvasSize;
 	snake[0].x = box * Math.floor(canvasSize/(2 * box));
 	snake[0].y = box * Math.floor(canvasSize/(2 * box));
+	if(isNaN(parseInt(localStorage.getItem('size'))))
+		getLocalStorage();
 	setFoodPos();
 	startDrow();
 }
