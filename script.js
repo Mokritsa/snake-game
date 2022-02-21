@@ -88,8 +88,14 @@ function getLocalStorage() {
 		bestScore = 0;
 	else
   	bestScore = parseInt(localStorage.getItem('bestScore'));
-	canvasSize = parseInt(localStorage.getItem('size'));
-	valSpeed = parseInt(localStorage.getItem('speed'));
+	if(isNaN(localStorage.getItem('size')))
+		canvasSize = 5;
+	else
+		canvasSize = parseInt(localStorage.getItem('size'));
+	if(isNaN(localStorage.getItem('speed')))
+		valSpeed = 1;
+	else	
+		valSpeed = parseInt(localStorage.getItem('speed'));
 	size.textContent = 'Size:\n' + canvasSize / box;
 	speed.textContent = 'Speed:\n' + valSpeed;
 	currentScore.textContent = "Score:\n" + score;
