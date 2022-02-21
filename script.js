@@ -4,6 +4,7 @@ const size = document.querySelector(".size");
 const speed = document.querySelector(".speed");
 const currentScore = document.querySelector(".current");
 const bestScr = document.querySelector(".best");
+const buton = document.querySelector('.start-game');
 let valSpeed = 1;
 const box = 20;
 let canvasSize = 60;
@@ -53,6 +54,16 @@ document.querySelector('.down-speed').addEventListener("click", (event) => {
 		restartGame();
 	}
 });
+
+buton.addEventListener("click", (event) => {
+	document.querySelector('.start-box').classList.add('is-active');
+	setTimeout(clearStartBox, 3000);
+});
+
+function clearStartBox(){
+	document.querySelector('.start-box').style.setProperty('display', 'none');
+}
+
 let dir;
 let snake = [];
 snake[0] = {
@@ -169,7 +180,6 @@ function setFoodPos() {
 	else{
 		food.x = Math.floor((Math.random() * (canvasSize / box))) * box;
 		food.y = Math.floor((Math.random() * (canvasSize / box))) * box;
-		console.log(canvasSize, box);
 		for(let i = 0; i < snake.length; i++)
 			if(food.x == snake[i].x && food.y == snake[i].y){
 				setFoodPos();
@@ -208,7 +218,6 @@ function gameDrow() {
 		snakeDrow(snake[0]);
 	else
 		snakeDrow(newHead);
-	//console.log(food);
 }
 
 function restartGame(){
@@ -221,7 +230,6 @@ function restartGame(){
 	dir = "";
 	snake[0].x = box * Math.floor(canvasSize/(2 * box));
 	snake[0].y = box * Math.floor(canvasSize/(2 * box));
-	console.log(snake[0]);
 	setFoodPos();
 	gameDrow();
 	startDrow();
