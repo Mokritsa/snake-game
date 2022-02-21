@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+    --mainBlack: black;
+    --mainWhite: white;
+    --mainOrange: #BDAE82
+}
+label {
+  margin: 5px auto;
+}
+.canvas {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game {
+  margin-top: 10px;
+  box-shadow:
+  0 0 3px 3px #27AE60,
+  5px 5px 10px yellow,
+  -5px 5px 10px lime,
+  -5px -5px 10px blue,
+  5px -5px 10px red;
+}
+.score {
+  display: flex;
+  align-items: center;
+}
+textarea {
+  resize: none;
+}
+.control-panel {
+  width: 50px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.control {
+  width: 50px;
+  height: 50px;
+  background-image: url("./assets/left.png");
+  background-size: 38px, 38px, contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.up-size,
+.up-speed { 
+  transform: rotate(90deg);  
+}
+.down-size,
+.down-speed {
+  transform: rotate(270deg);
+}
+.up-size:hover,
+.down-size:hover,
+.up-speed:hover,
+.down-speed:hover {
+  background-size: contain;
+  background-image: url("./assets/left.gif");
+}
+.resource-panel {
+  display: flex;
+  width: 360px;
+}
+.source-element {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: solid 2px var(--mainWhite);
+}
+.display {
+  display: flex;
+  flex-direction: column;
+}
+.size,
+.speed,
+.score {
+  margin: 0;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  color: #27AE60;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+.footer{
+  padding: 10px;
+  margin: 0 auto 0 auto;
+  width: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid var(--mainWhite);
+}
+.footer-data {
+  width: 182px;
+  height: 50px;
+  border: 1px solid var(--mainWhite);
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 50px;
+  color: var(--mainBlack);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto 0;
+}
+.rss-link {
+  width: 100px;
+  height: 100px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 50px;
+  color: var(--mainBlack);
+  background-image: url("./assets/svg/rs_school_js.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.link {
+  color: var(--mainBlack);
+  text-decoration: none;
+}
+  
+  
