@@ -84,15 +84,15 @@ function setLocalStorage() {
 }
 function getLocalStorage() {
 	stopDrow();
-	if(isNaN(localStorage.getItem('bestScore')))
+	if(isNaN(localStorage.getItem('bestScore')) || localStorage.getItem('bestScore') == null)
 		bestScore = 0;
 	else
   	bestScore = parseInt(localStorage.getItem('bestScore'));
-	if(isNaN(localStorage.getItem('size')))
+	if(isNaN(localStorage.getItem('size')) || localStorage.getItem('size') == null)
 		canvasSize = 100;
 	else
 		canvasSize = parseInt(localStorage.getItem('size'));
-	if(isNaN(localStorage.getItem('speed')))
+	if(isNaN(localStorage.getItem('speed')) || localStorage.getItem('speed') == null)
 		valSpeed = 1;
 	else	
 		valSpeed = parseInt(localStorage.getItem('speed'));
